@@ -1,0 +1,24 @@
+{
+  "name": "webpack-advanced",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhananjaysakhare244/webpack-advanced.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dhananjaysakhare244/webpack-advanced/issues"
+  },
+  "homepage": "https://github.com/dhananjaysakhare244/webpack-advanced#readme",
+  "devDependencies": {
+    "webpack": "^5.107.2",
+    "webpack-cli": "^7.0.3"
+  }
+}
