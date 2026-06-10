@@ -32,3 +32,19 @@
    we need to provide full path `npx webpack --config webpack/webpack.dev.config.js`
    Once you run dev and prod webpack then you will notice the build time is slow for prod and prod build is smaller and minified
    Dev builds are faster and has larger file size
+
+9. Setting up Dev server
+   Webpack dev server allows you to create hot module reload and we want to see changes directly in browser
+   install webpack-dev-service package
+   To run a dev server provide devServer option in webpack dev config
+   `devServer:{
+   port:9000,
+   static:{
+   directory:path.resolve(\_\_dirname,'..')
+   }
+   }
+
+You need to tunr of liveReload to enable hot module replacement
+live reload reloads the whole application and all the modules.
+hot module replacement maintains the state of application and only replaces the files modules that are changed
+You need to serve the app using webpack serve and add --hot key while running the npm command
