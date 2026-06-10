@@ -19,6 +19,7 @@
   "homepage": "https://github.com/dhananjaysakhare244/webpack-advanced#readme",
   "devDependencies": {
     "webpack": "^5.107.2",
-    "webpack-cli": "^7.0.3"
+    "webpack-cli": "^7.0.3",
+    "webpack-merge": "^6.0.1"
   }
 }
