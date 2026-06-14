@@ -35,7 +35,7 @@
 
 9. Setting up Dev server
    Webpack dev server allows you to create hot module reload and we want to see changes directly in browser
-   install webpack-dev-service package
+   install webpack-dev-server package
    To run a dev server provide devServer option in webpack dev config
    `devServer:{
    port:9000,
