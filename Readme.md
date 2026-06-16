@@ -56,3 +56,11 @@ You need to serve the app using webpack serve and add --hot key while running th
     dry:true // webpack will print all the files and notify us. If we should delete or not depends on us.
     keep: ./\css$/ // which files we should keep and not delete
     }
+
+15. The previous method doesn't work well in development mode. with clean option
+    we have a special plugin called clean-webpack-plugin
+    just add the plugin in plugins array and it will start working automatically.
+    we can provide some additional folders to clean up too.
+    imagine you have a tool that generates the folder you can remove it using this plugin
+    the name is cleanOnceBeforeBuildPatterns
+    cleanOnceBeforeBuildPatterns:['**/*',path.join(process.cwd(),'build/**/*')]

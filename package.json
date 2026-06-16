@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/dhananjaysakhare244/webpack-advanced#readme",
   "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^7.1.4",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.7",
