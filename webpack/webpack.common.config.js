@@ -7,6 +7,10 @@ const config = {
   // the config for output
   output: {
     path: path.resolve(__dirname, "../dist"), // dist folder is default if not specified
+    //clean property cleans the dist folder and deletes old bundle files.
+    // it accepts 2 values 1 is boolean or an object with different props dry and keep. dry will notify us instead of deleting it will list
+    // keep will not delete the files specified
+    clean: true,
   },
   module: {
     rules: [

@@ -48,3 +48,11 @@ You need to tunr of liveReload to enable hot module replacement
 live reload reloads the whole application and all the modules.
 hot module replacement maintains the state of application and only replaces the files modules that are changed
 You need to serve the app using webpack serve and add --hot key while running the npm command
+
+14. Removing old bundles from build folder
+    Webpack has special property called clean in output json prop
+    it can accept 2 different values 1 is boolean and another is an object with few props
+    clean: {
+    dry:true // webpack will print all the files and notify us. If we should delete or not depends on us.
+    keep: ./\css$/ // which files we should keep and not delete
+    }
