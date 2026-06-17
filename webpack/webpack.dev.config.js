@@ -24,7 +24,25 @@ module.exports = merge(common, {
     rules: [
       {
         test: /\.css$/, // matches this file ext
+        // exclude css modules
+        exclude: /\.module\.css$/,
         use: ["style-loader", "css-loader"], // runs these loaders for these file extension
+      },
+      // write new rules to handle how modules should be build
+      {
+        test: /\.css$/,
+        include: /\.module\.css$/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: {
+                localIdentName: "[local]--[md4:hash:7]", // use custom ident for css so we don't have collisions
+              },
+            },
+          },
+        ],
       },
     ],
   },
