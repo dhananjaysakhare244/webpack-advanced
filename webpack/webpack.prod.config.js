@@ -3,6 +3,9 @@ const { merge } = require("webpack-merge");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CSSMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const path = require("path");
+const glob = require("glob");
+const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
 module.exports = merge(common, {
   output: {
     filename: "js/[name].[contenthash:12].js",
@@ -69,6 +72,12 @@ module.exports = merge(common, {
   plugins: [
     new MiniCssExtractPlugin({
       filename: "css/[name].[contenthash:12].css",
+    }),
+    // this plugin will basically scan the css files and remove unnecessary css that's written
+    new PurgeCSSPlugin({
+      paths: glob.sync(`${path.join(__dirname, "../src")}/**/*`, {
+        nodir: true,
+      }),
     }),
   ],
 });
