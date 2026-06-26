@@ -26,6 +26,8 @@
     "css-minimizer-webpack-plugin": "^8.0.0",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.7",
+    "jss": "^10.10.0",
+    "jss-preset-default": "^10.10.0",
     "less": "^4.6.7",
     "less-loader": "^13.0.0",
     "mini-css-extract-plugin": "^2.10.2",
