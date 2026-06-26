@@ -13,6 +13,7 @@ module.exports = merge(common, {
   optimization: {
     minimize: true,
     minimizer: [
+      "...",
       new CssMinimizerPlugin({
         minimizerOptions: {
           preset: ["default", { discardComments: { removeAll: true } }],
