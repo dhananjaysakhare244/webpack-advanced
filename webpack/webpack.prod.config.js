@@ -67,6 +67,32 @@ module.exports = merge(common, {
           },
         ],
       },
+      {
+        test: /\.(png|jpg|svg)$/, // rule for images
+        type: "asset",
+        parser: {
+          dataUrlCondition: {
+            maxSize: 10 * 1024, // inline the file if size is 10kB. if more than 10 then copy the file in output directlry
+          },
+        },
+        generator: {
+          filename: "./images/[name].[contenthash:12][ext]",
+        },
+        use: [
+          {
+            loader: "image-webpack-loader",
+            options: {
+              mozjpeg: {
+                quality: 40, // compression quality 0 is worse quality 100 is best quality
+              },
+              pngquant: {
+                quality: [0.65, 0.9],
+                speed: 4,
+              },
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
