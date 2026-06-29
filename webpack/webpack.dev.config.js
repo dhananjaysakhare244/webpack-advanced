@@ -65,6 +65,18 @@ module.exports = merge(common, {
           },
         ],
       },
+      {
+        test: /\.(png|jpg|svg)$/, // rule for images
+        type: "asset",
+        parser: {
+          dataUrlCondition: {
+            maxSize: 10 * 1024, // inline the file if size is 10kB. if more than 10 then copy the file in output directlry
+          },
+        },
+        generator: {
+          filename: "./images/[name][ext]",
+        },
+      },
     ],
   },
 });
