@@ -20,6 +20,7 @@
   "homepage": "https://github.com/dhananjaysakhare244/webpack-advanced#readme",
   "devDependencies": {
     "@babel/core": "^8.0.1",
+    "@babel/plugin-proposal-pipeline-operator": "^8.0.1",
     "@babel/preset-env": "^8.0.2",
     "autoprefixer": "^10.5.2",
     "babel-loader": "^10.1.1",
@@ -52,6 +53,7 @@
   },
   "dependencies": {
     "@emotion/css": "^11.13.5",
-    "core-js": "^3.49.0"
+    "core-js": "^3.49.0",
+    "lodash": "^4.18.1"
   }
 }
