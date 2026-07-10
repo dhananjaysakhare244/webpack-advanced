@@ -1,19 +1,26 @@
 {
-  "presets": [
-    [
-      "@babel/preset-env",
-      {
-        "debug": true
-      }
-    ]
-  ],
-  "plugins": [
-    [
-      "babel-plugin-polyfill-corejs3",
-      {
-        "method": "usage-pure",
-        "proposals": true
-      }
-    ]
-  ]
+  "env": {
+    "production": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "debug": true
+          }
+        ]
+      ],
+      "plugins": [
+        [
+          "babel-plugin-polyfill-corejs3",
+          {
+            "method": "usage-pure",
+            "proposals": true
+          }
+        ]
+      ]
+    },
+    "dev": {
+      "presets": [["@babel/preset-env"]]
+    }
+  }
 }
