@@ -14,7 +14,8 @@
           "babel-plugin-polyfill-corejs3",
           {
             "method": "usage-pure",
-            "proposals": true
+            "proposals": true,
+            "debug": true
           }
         ]
       ]
