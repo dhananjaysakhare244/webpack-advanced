@@ -13,6 +13,9 @@ const config = {
     // keep will not delete the files specified.
     clean: true,
   },
+  resolve: {
+    extensions: [".ts", ".js"],
+  },
   module: {
     rules: [
       {
@@ -24,7 +27,7 @@ const config = {
         ],
       },
       {
-        test: /\.js$/,
+        test: /\.(js|ts)$/,
         exclude: /node_modules/,
         use: "babel-loader",
       },

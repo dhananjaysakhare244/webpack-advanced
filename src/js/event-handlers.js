@@ -1,12 +1,8 @@
 import { renderTodos, clearNewTodoInput, getTodoId } from "./ui";
 import { getAllTodos, addTodo, removeTodo, updateTodo } from "./data";
 import capitalize from "lodash/capitalize";
-function trim(value) {
-  return value
-    .replace(/^\s+/, "")
-    .replace(/\s+/, "")
-    .replace(/\s{2,}/g, " ");
-}
+import { trim } from "./helper";
+
 export function onLoadEventHandler() {
   renderTodos(getAllTodos());
 }

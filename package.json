@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "cross-env BABEL_ENV=production webpack --config webpack/webpack.prod.config.js",
-    "dev": "cross-env BABEL_ENV=dev webpack serve --config webpack/webpack.dev.config.js --hot"
+    "dev": "cross-env BABEL_ENV=dev webpack serve --config webpack/webpack.dev.config.js --hot",
+    "typecheck": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
     "@babel/core": "^8.0.1",
     "@babel/plugin-proposal-pipeline-operator": "^8.0.1",
     "@babel/preset-env": "^8.0.2",
+    "@babel/preset-typescript": "^8.0.1",
     "autoprefixer": "^10.5.2",
     "babel-loader": "^10.1.1",
     "babel-plugin-polyfill-corejs3": "^1.0.0",
@@ -46,6 +48,7 @@
     "sass": "^1.101.0",
     "sass-loader": "^17.0.0",
     "style-loader": "^4.0.0",
+    "typescript": "^7.0.2",
     "webpack": "^5.107.2",
     "webpack-cli": "^7.0.3",
     "webpack-dev-server": "^5.2.4",
