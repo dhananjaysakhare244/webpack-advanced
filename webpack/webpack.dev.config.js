@@ -6,6 +6,7 @@ module.exports = merge(common, {
     filename: "bundle.js", // main.js is default if not provided
   },
   mode: "development",
+  devtool: "eval-source-map",
   devServer: {
     port: 9000,
     static: {
