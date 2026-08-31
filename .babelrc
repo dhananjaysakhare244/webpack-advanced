@@ -31,6 +31,14 @@
       "presets": [["@babel/preset-env"]],
       "plugins": [
         [
+          "@emotion",
+          {
+            "sourceMap": true,
+            "autoLabel": "dev-only",
+            "labelFormat": "[filename]--[local]"
+          }
+        ],
+        [
           "@babel/plugin-proposal-pipeline-operator",
           {
             "proposal": "fsharp"
