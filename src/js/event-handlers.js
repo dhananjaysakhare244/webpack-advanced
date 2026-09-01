@@ -1,6 +1,6 @@
 import { renderTodos, clearNewTodoInput, getTodoId } from "./ui";
 import { getAllTodos, addTodo, removeTodo, updateTodo } from "./data";
-import capitalize from "lodash/capitalize";
+import capitalize from "lodash-es/capitalize";
 import { trim } from "./helper";
 
 export function onLoadEventHandler() {

@@ -58,6 +58,6 @@
   "dependencies": {
     "@emotion/css": "^11.13.5",
     "core-js": "^3.49.0",
-    "lodash": "^4.18.1"
+    "lodash-es": "^4.18.1"
   }
 }
