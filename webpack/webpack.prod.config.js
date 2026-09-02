@@ -13,9 +13,24 @@ module.exports = merge(common, {
   output: {
     filename: "js/[name].[contenthash:12].js",
   },
+
   // special optimization for CSS
   // this uses CSSNano tool under the hood to optimize css for prod
   optimization: {
+    splitChunks: {
+      cacheGroups: {
+        jquery: {
+          test: /[\\/]node_modules[\\/]jquery[\\/]/,
+          chunks: "initial",
+          name: "jquery",
+        },
+        bootstrap: {
+          test: /[\\/]node_modules[\\/]bootstrap[\\/]/,
+          chunks: "initial",
+          name: "bootstrap",
+        },
+      },
+    },
     minimize: true,
     minimizer: [
       `...`,
