@@ -6,6 +6,7 @@
   "scripts": {
     "build": "cross-env BABEL_ENV=production webpack --config webpack/webpack.prod.config.js",
     "dev": "cross-env BABEL_ENV=dev webpack serve --config webpack/webpack.dev.config.js --hot",
+    "bundle-analyzer": "cross-env NODE_ENV=production NODE_ENV=production webpack --config webpack/webpack.analyze.config.js",
     "typecheck": "tsc --noEmit"
   },
   "repository": {
@@ -51,6 +52,7 @@
     "style-loader": "^4.0.0",
     "typescript": "^7.0.2",
     "webpack": "^5.107.2",
+    "webpack-bundle-analyzer": "^5.3.2",
     "webpack-cli": "^7.0.3",
     "webpack-dev-server": "^5.2.4",
     "webpack-merge": "^6.0.1"
