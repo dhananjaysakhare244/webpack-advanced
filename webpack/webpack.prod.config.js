@@ -17,17 +17,27 @@ module.exports = merge(common, {
   // special optimization for CSS
   // this uses CSSNano tool under the hood to optimize css for prod
   optimization: {
+    runtimeChunk: "single",
     splitChunks: {
+      chunks: "all",
+      maxSize: Infinity,
+      minSize: 2000,
       cacheGroups: {
         jquery: {
           test: /[\\/]node_modules[\\/]jquery[\\/]/,
-          chunks: "initial",
           name: "jquery",
         },
         bootstrap: {
           test: /[\\/]node_modules[\\/]bootstrap[\\/]/,
-          chunks: "initial",
           name: "bootstrap",
+        },
+        lodash: {
+          test: /[\\/]node_modules[\\/]lodash-es[\\/]/,
+          name: "lodash-es",
+        },
+        node_modules: {
+          test: /[\\/]node_modules/,
+          name: "node_modules",
         },
       },
     },
